@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <group>
+      <!-- <selector title="title" :options="options"
+      v-model="value"></selector> -->
+    </group>
     <div class="header">
       <span class="header-banner">
         <img src="./assets/zhuanxian_03.jpg" alt="">
@@ -41,6 +45,7 @@
         </dd>
       </dl>
     </div>
+     <!-- <panel></panel> -->
     <!-- <div class="footer">
 
     </div> -->
@@ -52,9 +57,29 @@
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      value: '',
+      options: [
+        {
+          key: 'number',
+          value: 123
+        },
+        {
+          key: 'number',
+          value: 456
+        }
+      ]
+    }
+  },
+  mounted () {
+    this.handle()
+  },
   methods: {
-    handle() {
-      console.log('123')
+    handle () {
+      // const dpr = window.document.documentElement.querySelector('meta[name="flexible"]').getAttribute('content')
+      // alert(dpr, '-dpr')
+      // alert(window.devicePixelRatio)
     }
   }
 }
@@ -128,7 +153,7 @@ export default {
    font-size: 18px; /*px*/
  }
  .content dl dd h2 {
-   font-size: 24px;
+   font-size: 24px;/*px*/
    font-weight: bolder;
    line-height: 35px;
  }
@@ -141,3 +166,10 @@ export default {
  box-sizing: border-box;
 }
 </style>
+<!-- <style lang="less">
+  @import '~vux/src/styles/reset.less';
+
+  body {
+    background-color: #fbf9fe;
+  }
+</style> -->

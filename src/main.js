@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'lib-flexible'
-
+import { Panel, Selector, Group } from 'vux'
+Vue.component('Panel', Panel)
+Vue.component('Selector', Selector)
+Vue.component('Group', Group)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
