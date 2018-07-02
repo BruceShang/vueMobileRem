@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <group>
-      <!-- <selector title="title" :options="options"
-      v-model="value"></selector> -->
-    </group>
+    <!-- <group>
+      <selector title="title" :options="options"
+      v-model="value"></selector>
+    </group> -->
     <div class="header">
       <span class="header-banner">
         <img src="./assets/zhuanxian_03.jpg" alt="">
