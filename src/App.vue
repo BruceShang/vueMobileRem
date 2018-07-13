@@ -1,175 +1,145 @@
 <template>
   <div id="app">
-    <!-- <group>
-      <selector title="title" :options="options"
-      v-model="value"></selector>
-    </group> -->
     <div class="header">
-      <span class="header-banner">
-        <img src="./assets/zhuanxian_03.jpg" alt="">
+      <span class="header-logo">
+        <!-- <img src="./assets/zhuanxian_03.jpg" alt=""> -->
+        <img src="http://image.mihui365.com/mihui-static/img/bg-download.png" alt="">
       </span>
-      <span class="header-rg">
+      <div class="header-rg">
         <a>登录</a>
-        <img src="./assets/zhuanxian_06.jpg" alt="">
-      </span>
+        <!-- <img src="./assets/zhuanxian_06.jpg" alt=""> -->
+      </div>
     </div>
-    <div class="app-banner">专线园区
+    <div class="app-banner" style="background: url('http://image.mihui365.com/salelistImg/5169008608626988.jpg') no-repeat center; background-size: cover">
+    <!-- 专线园区 -->
     </div>
-    <div class="content">
-      <dl>
-        <dt><img src="./assets/zhuanxian_11.jpg" alt=""></dt>
-        <dd>
-          <h2>苏州中物流现代之星商贸产…</h2>
-<p>苏州中物流现代之星商贸中物流现代中物流现代中物流现代中物流现代中物流现代中物流现代</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt><img src="./assets/zhuanxian_11.jpg" alt=""></dt>
-        <dd>
-          <h2>苏州中物流现代之星商贸产…</h2>
-<p>苏州中物流现代之星商贸中物流现代中物流现代中物流现代中物流现代中物流现代中物流现代</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt><img src="./assets/zhuanxian_11.jpg" alt=""></dt>
-        <dd>
-          <h2>苏州中物流现代之星商贸产…</h2>
-<p>苏州中物流现代之星商贸中物流现代中物流现代中物流现代中物流现代中物流现代中物流现代</p>
-        </dd>
-      </dl>
-      <dl>
-        <dt><img src="./assets/zhuanxian_11.jpg" alt=""></dt>
-        <dd>
-          <h2>苏州中物流现代之星商贸产…</h2>
-<p>苏州中物流现代之星商贸中物流现代中物流现代中物流现代中物流现代中物流现代中物流现代</p>
-        </dd>
-      </dl>
+    <i class="iconfont">&#xe605;</i>
+    <i class="iconfont--texticon"></i>
+    <!-- <mt-button type="default">default</mt-button>
+    <mt-button type="primary">primary</mt-button>
+    <mt-button type="danger">danger</mt-button> -->
+    <div class="app__content">
+      <div class="app__item" v-for="item in picList" :key="item">
+        <i class="app__border-1px"></i>
+        <i class="app__border-1px-bottom"></i>
+        <img :src="`http://image.mihui365.com/boutiqueImg/${item}`" alt="">
+        <p class="ignore">睡眠面膜 圣诞限定</p>
+        <span class="ignore">￥ 89.99</span>
+      </div>
     </div>
-     <!-- <panel></panel> -->
-    <!-- <div class="footer">
-
-    </div> -->
-    <!-- <img src="./assets/logo.png"> -->
-    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
-  data () {
+  data() {
     return {
-      value: '',
-      options: [
-        {
-          key: 'number',
-          value: 123
-        },
-        {
-          key: 'number',
-          value: 456
-        }
-      ]
+      picList: [
+        '1215327031945250.jpg',
+        '1466061814295342.jpg',
+        '25840294506507237.jpg',
+        '9861147032078084.jpg',
+        '1215327031945250.jpg',
+        '1466061814295342.jpg',
+        '25840294506507237.jpg',
+        '9861147032078084.jpg',
+      ],
     }
   },
-  mounted () {
-    this.handle()
-  },
-  methods: {
-    handle () {
-      // const dpr = window.document.documentElement.querySelector('meta[name="flexible"]').getAttribute('content')
-      // alert(dpr, '-dpr')
-      // alert(window.devicePixelRatio)
-    }
-  }
 }
 </script>
 
+<style lang="stylus" scpoped>
+  // - 1 像素解决方案
+  // @svg square {
+  //   @rect {
+  //     fill: var(--color, black);
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // };
+  // font-size: 14px;/*px*/
+  .app {
+    &__item {
+      display: inline-block;
+      position: relative
+      width: 50%;
+      // height: 420px;
+      vertical-align: top;
+      background: #ffffff
+      img {
+        height 345px
+        width: 100%
+      }
+      p {
+        padding: 0px 0px 5px 24px;
+        font-size: 24px;/*px*/
+      }
+      span {
+        display: inline-block
+        padding: 0px 0px 24px 24px;
+        color: #ff5a5f
+        font-size: 34px;/*px*/
+      }
+    }
+    &__border-1px {
+      position: absolute
+      width: 1px
+      height: 100%
+      background: white svg(square param(--color #dedede))
+    }
+    &__border-1px-bottom {
+      position: absolute
+      width: 100%
+      height: 1px
+      background: white svg(square param(--color #dedede))
+    }
+  }
+</style>
+
 <style>
   .header {
+    position: fixed;
     width: 100%;
     height: 80px;
+    top: 0px;
+    padding-bottom: 20px;
     background: #ffffff;
+    z-index: 1;
   }
-  .header-banner {
-     display: inline-block;
-     width: 141px;
-     height: 62px;
-     margin: 16px 0 0 60px;
-  }
- .header-banner img {
-   width: 100%;
- }
- .header-rg {
-   float: right;
-   margin: 30px 40px 0 0;
-   font-size:26px;/*px*/
-   color:rgba(255,147,0,1);
- }
- .header-rg img {
-   width: 44px;
-   height: 28px;
-   vertical-align: bottom;
- }
- .app-banner {
-   margin-top: 20px;
-   width: 100%;
-   height: 304px;
-   font-size:40px;/*px*/
-   text-align: center;
-   line-height: 304px;
-   color: rgba(255,255,255,1);
-   background: url("./assets/banenr.png")
- }
- .content {
-   width: 100%;
-   padding: 0px 30px;
-   margin-top: 30px;
- }
- .content dl {
-   display: inline-block;
-   vertical-align: top;
-   width: 100%;
-   margin-bottom: 20px;
 
- }
- .content dt {
-   float: left;
-   width: 200px;
-   margin-right: 20px;
- }
- .content dt img{
-   width: 100%;
- }
- .content dl dd {
-   float: left;
-   width: calc(100% - 220px);
-   font-size: 24px;/*px*/
-   margin-left: 0px;
-   line-height: 35px;
-   padding-top: 10px;
- }
- .content dl dd:nth-of-type(2) {
-   font-size: 18px; /*px*/
- }
- .content dl dd h2 {
-   font-size: 24px;/*px*/
-   font-weight: bolder;
-   line-height: 35px;
- }
- .footer {
-   width: 100%;
-   height: 300px;
-   background: #333333;
- }
-* {
- box-sizing: border-box;
-}
+  .header-logo {
+    display: inline-block;
+    height: 62px;
+    margin: 10px 0 0 30px;
+  }
+
+  .header-logo img {
+    width: 60px;
+    vertical-align: middle;
+    /* width: 100%; */
+  }
+
+  .header-rg {
+    float: right;
+    margin: 25px 40px 0 0;
+    font-size: 26px;/*px*/
+    color: rgba(255, 147, 0, 1);
+  }
+  .header-rg img {
+    display: inline-block;
+    width: 44px;
+    height: 28px;
+    vertical-align: sub;
+  }
+  .app-banner {
+    width: 100%;
+    height: 304px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 304px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 80px;
+  }
 </style>
-<!-- <style lang="less">
-  @import '~vux/src/styles/reset.less';
-
-  body {
-    background-color: #fbf9fe;
-  }
-</style> -->
