@@ -11,14 +11,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "lib-flexible": "^0.3.2",
-    "nisu-koa2-sdk": "^1.0.3",
-    "nisusite-vue-deps": "^1.0.10",
-    "vux": "^2.9.2",
-    "vux-loader": "^1.2.9",
-    "px2rem-loader": "^0.1.9",
     "less": "^3.0.4",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "lib-flexible": "^0.3.2",
+    "nisu-koa2-sdk": "^1.0.4",
+    "nisusite-vue-deps": "^1.0.10",
+    "postcss-pxtorem": "^4.0.1",
+    "px2rem-loader": "^0.1.9",
+    "vux": "^2.9.2",
+    "vux-loader": "^1.2.9"
   },
   "engines": {
     "node": ">= 6.0.0",

@@ -3,7 +3,6 @@
  */
 
 // import FastClick from 'fastclick'
-
 // FastClick.attach(global.document.body)
 
 const win = global
@@ -18,8 +17,21 @@ let pixelRatio = 2
 function setRootFont() {
   const docWidth = documentHTML.getBoundingClientRect().width
   const scale = docWidth / baseWidth
+  const isIPhone = win.navigator.appVersion.match(/iphone/gi)
+  const { devicePixelRatio } = window
+  // 处理ihone Retina多倍屏
+  if (isIPhone) {
+    if (devicePixelRatio >= 3) {
+      pixelRatio = 3
+    } else if (devicePixelRatio >= 2) {
+      pixelRatio = 2
+    } else {
+      pixelRatio = 1
+    }
+  } else {
+    pixelRatio = 1
+  }
   documentHTML.style.fontSize = `${scale * 100}px`
-  pixelRatio = global.devicePixelRatio === 3 ? 3 : 2
   documentHTML.setAttribute('data-dpr', pixelRatio)
 }
 

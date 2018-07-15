@@ -6,7 +6,9 @@ import App from './App'
 import router from './router'
 // import 'lib-flexible'
 import '@/assets/stylus/index.styl'
+
 require('./utils/responsive')
+// require('./utils/scale')
 
 Vue.component('Panel', Panel)
 Vue.component('Selector', Selector)
