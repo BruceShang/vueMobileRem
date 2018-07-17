@@ -1,0 +1,34 @@
+.we-cell {
+  display: flex;
+  overflow: hidden;
+  line-height 88px
+  padding 0 30px
+  position: relative;
+
+  &__vertical-center {
+    align-items: center;
+  }
+
+  &__center {
+    justify-content: center;
+  }
+
+  & + &::before {
+    border-top: $border;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  a& {
+    color: inherit;
+  }
+}

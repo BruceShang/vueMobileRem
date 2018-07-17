@@ -11,15 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
-    "lib-flexible": "^0.3.2",
-    "nisu-koa2-sdk": "^1.0.4",
-    "nisusite-vue-deps": "^1.0.10",
-    "postcss-pxtorem": "^4.0.1",
-    "px2rem-loader": "^0.1.9",
-    "vux": "^2.9.2",
-    "vux-loader": "^1.2.9"
+    "nisu-koa2-sdk": "^1.0.8",
+    "nisusite-vue-deps": "^1.0.11"
   },
   "engines": {
     "node": ">= 6.0.0",
@@ -39,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/BruceShang/vueMobileRem/issues"
   },
-  "homepage": "https://github.com/BruceShang/vueMobileRem#readme"
+  "homepage": "https://github.com/BruceShang/vueMobileRem#readme",
+  "devDependencies": {
+    "install": "^0.12.1",
+    "normalize.css": "^8.0.0",
+    "npm": "^6.2.0"
+  }
 }

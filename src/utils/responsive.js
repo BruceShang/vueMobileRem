@@ -1,9 +1,14 @@
 /**
+ * 处理移动端适配问题
+ * @author shang
+ * @date 2018-07-13
+ */
+/**
  * @file rem响应式方案的实现，与点击延迟处理
  */
+import FastClick from 'fastclick'
 
-// import FastClick from 'fastclick'
-// FastClick.attach(global.document.body)
+FastClick.attach(global.document.body)
 
 const win = global
 const doc = win.document
