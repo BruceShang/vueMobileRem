@@ -19,6 +19,22 @@ export default [
         },
         component: resolve => require(['../../views/ui/button.vue'], resolve),
       },
+      {
+        name: 'ui-card',
+        path: '/ui-card',
+        meta: {
+          title: 'Card',
+        },
+        component: resolve => require(['../../views/ui/card.vue'], resolve),
+      },
+      {
+        name: 'ui-form',
+        path: '/ui-form',
+        meta: {
+          title: 'Form',
+        },
+        component: resolve => require(['../../views/ui/form.vue'], resolve),
+      },
     ],
   },
 ]

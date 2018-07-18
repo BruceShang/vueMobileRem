@@ -1,16 +1,17 @@
 @font-face {
-  font-family: 'nisu Icons';  /* project id 750429 */
-  src: url('//at.alicdn.com/t/font_750429_rfxvbkojxdn.eot');
-  src: url('//at.alicdn.com/t/font_750429_rfxvbkojxdn.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_750429_rfxvbkojxdn.woff') format('woff'),
-  url('//at.alicdn.com/t/font_750429_rfxvbkojxdn.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_750429_rfxvbkojxdn.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 750429 */
+  src: url('//at.alicdn.com/t/font_750429_yb5x28lw3d.eot');
+  src: url('//at.alicdn.com/t/font_750429_yb5x28lw3d.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.woff') format('woff'),
+  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.svg#iconfont') format('svg');
 }
+
 
 .we-icon {
   direction: ltr;
   display: inline-block;
-  font: normal normal normal $font-size/1 "nisu Icons";
+  font: normal normal normal $font-size/1 "iconfont";
   font-size: inherit;
   line-height: inherit;
   letter-spacing: normal;
@@ -24,5 +25,14 @@
 
   &--right-arrow::before {
     content: "\e644";
+  }
+  &--left-arrow::before {
+    content: "\e602";
+  }
+  &--share::before {
+    content: "\e69a";
+  }
+  &--checkbox-right::before {
+    content: "\e61e";
   }
 }

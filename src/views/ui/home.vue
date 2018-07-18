@@ -32,6 +32,20 @@
               name: 'ui-button',
             },
           },
+          {
+            name: 'Card',
+            route: {
+              query,
+              name: 'ui-card',
+            },
+          },
+          {
+            name: 'From',
+            route: {
+              query,
+              name: 'ui-form',
+            },
+          },
         ],
       }
     },

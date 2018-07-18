@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    kjdfjdfj
+    <div class="header" style="min-height: 0.88rem">
+      <topbar></topbar>
+    </div>
     <router-view/>
   </div>
 </template>

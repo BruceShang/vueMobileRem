@@ -10,7 +10,7 @@
         <h5 class="we-card__title">标题</h5>
         <div class="we-card__menu">
           <a href="#">操作</a>
-          <i class="we-icon we-icon--angle-right"></i>
+          <i class="we-icon we-icon--right-arrow"></i>
         </div>
       </div>
       <div class="we-card__body">内容</div>
