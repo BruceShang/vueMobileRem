@@ -9,14 +9,14 @@
       <div class="we-card__header">
         <h1 class="we-card__title">复选框 --{{checkboxlist}}</h1>
       </div>
-      <div class="we-card__body">
+      <div>
         <label class="we-cell">
           <div class="we-cell__body">苹果</div>
-          <we-checkbox name="foo" value="apple" id="apple" v-model="checkboxlist"></we-checkbox>
+          <we-checkbox name="foo" value="apple" checked v-model="checkboxlist"></we-checkbox>
         </label>
         <label class="we-cell">
           <div class="we-cell__body">香蕉</div>
-          <we-checkbox name="foo" value="banana" id="banana" v-model="checkboxlist"></we-checkbox>
+          <we-checkbox name="foo" value="banana" v-model="checkboxlist"></we-checkbox>
         </label>
       </div>
     </div>
@@ -24,27 +24,16 @@
       <div class="we-card__header">
         <h1 class="we-card__title">单选框 - {{payment}}</h1>
       </div>
-      <div class="we-card__body">
+      <div>
         <label class="we-cell">
-          <div class="we-cell__body">微信支付</div>
-          <div class="we-radio">
-            <input type="radio" v-model="payment" class="we-radio__input" value="payment1" name="payment" checked>
-            <span class="we-radio__indicator"></span>
-          </div>
+          <div class="we-cell__header"> <i class="we-icon we-icon--wechat-pay we-wechat-pay"></i></div>
+          <div class="we-cell__body"> 微信支付</div>
+          <we-radio name="payment" value="wechatPay" checked v-model="payment"></we-radio>
         </label>
         <label class="we-cell">
+          <div class="we-cell__header"> <i class="we-icon we-icon--alipay we-alipay"></i></div>
           <div class="we-cell__body">支付宝支付</div>
-          <div class="we-radio">
-            <input type="radio" v-model="payment" class="we-radio__input" value="payment2" name="payment">
-            <span class="we-radio__indicator"></span>
-          </div>
-        </label>
-        <label class="we-cell">
-          <div class="we-cell__body">工商银行支付</div>
-          <div class="we-radio">
-            <input type="radio" v-model="payment" class="we-radio__input" value="payment3" name="payment">
-            <span class="we-radio__indicator"></span>
-          </div>
+          <we-radio name="payment" value="alipay" v-model="payment"></we-radio>
         </label>
       </div>
     </div>
@@ -56,15 +45,21 @@ export default {
   data() {
     return {
       checkboxs: ['apple'],
-      payment: 'payment1',
+      payment: 'wechatPay',
       checkboxlist: [],
-      css: '',
-      html: '',
-      javascript: '',
     }
   },
 }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+.we-wechat-pay,
+.we-alipay {
+  margin-right: 12px;
+  font-size: 36px;
+  color: #4bad41;
+}
+.we-alipay {
+  color: #2AADEA;  
+}
 </style>

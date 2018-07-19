@@ -7,7 +7,7 @@
       </a>
     </div>
     <div class="topbar__body">
-      这是标题
+      {{ title }}
     </div>
     <div class="topbar__footer">
       <a href="javascript:;">
@@ -19,6 +19,12 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+  },
   methods: {
     gotoBack() {
       if (global.history.length > 1) {

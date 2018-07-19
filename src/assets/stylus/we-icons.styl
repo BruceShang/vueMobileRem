@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 750429 */
-  src: url('//at.alicdn.com/t/font_750429_yb5x28lw3d.eot');
-  src: url('//at.alicdn.com/t/font_750429_yb5x28lw3d.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.woff') format('woff'),
-  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_750429_yb5x28lw3d.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_750429_24rqpjh9kli.eot');
+  src: url('//at.alicdn.com/t/font_750429_24rqpjh9kli.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_750429_24rqpjh9kli.woff') format('woff'),
+  url('//at.alicdn.com/t/font_750429_24rqpjh9kli.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_750429_24rqpjh9kli.svg#iconfont') format('svg');
 }
 
 
@@ -34,5 +34,56 @@
   }
   &--checkbox-right::before {
     content: "\e61e";
+  }
+  &--wechat-pay::before {
+    content: "\e611";
+  }
+  &--alipay::before {
+    content: "\e634";
+  }
+}
+
+WeIconGroupSize(size, fontSize, scale) {
+  width: size;
+  height: size;
+  line-height: size;
+  .we-icon {
+    font-size: fontSize
+    transform: scale(scale)
+  }
+}
+
+WeIconGroupColor(bgColor, iconColor) {
+  background-color: bgColor;
+  .we-icon {
+    color: iconColor;
+  }
+}
+
+.we-icon-group {
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  &--small {
+    WeIconGroupSize($font-size-h4, $font-size-xs, 0.6)
+  }
+  &--medium {
+    WeIconGroupSize($font-size-lg, $font-size-sm, 0.8)
+  }
+  &--large {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  &--default {
+    WeIconGroupColor($layout-border-color, #222)
+  }
+  &--primary {
+    WeIconGroupColor($color-primary, $white)
+  }
+  &--darker {
+    WeIconGroupColor(#404040, $white)
   }
 }

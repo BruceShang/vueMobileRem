@@ -17,8 +17,6 @@
 <script type="text/babel">
   export default {
     data() {
-      const { query } = this.$route.query
-
       return {
         /**
          * 组件一览表
@@ -28,22 +26,31 @@
           {
             name: 'Button',
             route: {
-              query,
               name: 'ui-button',
             },
           },
           {
             name: 'Card',
             route: {
-              query,
               name: 'ui-card',
             },
           },
           {
             name: 'From',
             route: {
-              query,
               name: 'ui-form',
+            },
+          },
+          {
+            name: 'Icons',
+            route: {
+              name: 'ui-icons',
+            },
+          },
+          {
+            name: 'Loading',
+            route: {
+              name: 'ui-loading',
             },
           },
         ],

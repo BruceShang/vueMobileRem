@@ -1,17 +1,16 @@
-# CheckBox
+# Radio
 
-> 复选框
+> 单选按钮
 
 ## Usage
 
 ```html
- <we-checkbox 
-   name="foo"
-   value="apple" 
-   id="apple" 
-   checked 
-   v-model="checkboxlist">
- </we-checkbox>
+  <we-radio 
+    name="payment" 
+    value="wechatPay" 
+    checked 
+    v-model="payment">
+  </we-radio>
 ```
 ### props
 

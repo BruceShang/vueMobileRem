@@ -8,6 +8,7 @@ import './filters'
 import './directives'
 import './components'
 import './plugins'
+import store from './store'
 
 require('./index')
 require('./utils/responsive')
@@ -22,6 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
   // render: h => h(App),
