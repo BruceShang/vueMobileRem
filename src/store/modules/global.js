@@ -3,9 +3,9 @@ const UPDATETITLE = 'UPDATETITLE'
 const initState = {
   title: '',
 }
-const getters = {}
 
 const actions = {
+  // 更换title
   updateTitle({ commit }, data) {
     commit('UPDATETITLE', data)
   },
@@ -21,5 +21,4 @@ export default {
   state: Object.assign({}, initState),
   mutations,
   actions,
-  getters,
 }

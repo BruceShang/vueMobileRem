@@ -53,6 +53,12 @@
               name: 'ui-loading',
             },
           },
+          {
+            name: 'Http',
+            route: {
+              name: 'ui-http',
+            },
+          },
         ],
       }
     },

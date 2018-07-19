@@ -51,6 +51,14 @@ export default [
         },
         component: resolve => require(['views/ui/loading.vue'], resolve),
       },
+      {
+        name: 'ui-http',
+        path: '/ui-http',
+        meta: {
+          title: 'Http',
+        },
+        component: resolve => require(['views/ui/http.vue'], resolve),
+      },
     ],
   },
 ]

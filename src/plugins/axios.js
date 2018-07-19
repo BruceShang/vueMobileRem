@@ -17,10 +17,13 @@ axios.interceptors.request.use((config) => {
 })
 
 axios.interceptors.response.use((response) => {
-  const { data } = response.data
-  switch (data.code) {
+  // 此处有争议，需要和后端确认好之后再作处理 todo
+  const { data, code } = response.data
+  switch (code) {
     case 0:
     case '0':
+    case 200:
+    case '200':
       return data
 
     default:
@@ -86,7 +89,7 @@ axios.interceptors.response.use((response) => {
 })
 
 axios.install = (Vue) => {
-  Vue.prototype.$axios = axios
+  Vue.prototype.$http = axios
 }
 
 export default axios

@@ -2,11 +2,10 @@
 import routesUi from './ui'
 
 export default [
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: resolve => require(['../../views/index/index.vue'], resolve),
-  // },
+  {
+    path: '/',
+    redirect: '/ui',
+  },
   ...routesUi,
   // {
   //   path: '/404',
