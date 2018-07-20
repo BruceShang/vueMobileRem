@@ -1,8 +1,10 @@
+const ProxyContainer = require('./dev-proxy-container')
+
 module.exports = {
+  appPort: 8080,
   proxy: {
     '/api': {
-      target: 'http://106.14.226.23:80',
-      changeOrigin: true,
+      target: ProxyContainer.proxyTable.personal,
     }
   },
 }
