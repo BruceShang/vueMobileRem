@@ -59,6 +59,12 @@
               name: 'ui-http',
             },
           },
+          {
+            name: 'Demo-page',
+            route: {
+              name: 'demo-page',
+            },
+          },
         ],
       }
     },

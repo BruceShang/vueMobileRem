@@ -59,6 +59,14 @@ export default [
         },
         component: resolve => require(['views/ui/http.vue'], resolve),
       },
+      {
+        name: 'demo-page',
+        path: '/demo-page',
+        meta: {
+          title: 'Demo-page',
+        },
+        component: resolve => require(['views/ui/demo-page.vue'], resolve),
+      },
     ],
   },
 ]

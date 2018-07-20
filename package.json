@@ -11,9 +11,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "nisu-koa2-sdk": "^1.0.8",
-    "nisusite-vue-deps": "^1.0.11",
-    "vuex": "^3.0.1"
+    "@position/nisu-components": "^1.0.4",
+    "@position/nisu-koa2-sdk": "^1.0.9",
+    "@position/nisu-vue2-deps": "^1.0.13"
   },
   "engines": {
     "node": ">= 6.0.0",
@@ -34,9 +34,5 @@
     "url": "https://github.com/BruceShang/vueMobileRem/issues"
   },
   "homepage": "https://github.com/BruceShang/vueMobileRem#readme",
-  "devDependencies": {
-    "install": "^0.12.1",
-    "normalize.css": "^8.0.0",
-    "npm": "^6.2.0"
-  }
+  "devDependencies": {}
 }
