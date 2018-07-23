@@ -76,18 +76,20 @@ module.exports = new Promise((resolve, reject) => {
     } else {
       // publish the new Port, necessary for e2e tests
       process.env.PORT = port
-      // add port to devServer config
+      // 为本地服务添加端口号
       devWebpackConfig.devServer.port = port
-      // Add FriendlyErrorsPlugin
+      // 代理地址
+      const proxyAddress = config.dev.proxyTable['/api'].target || '暂未设置代理地址'
+      // 编译完成打印出相关状态信息
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
           messages: [`Your application is running here: http://${require('ip').address()}:${port}`],
+          notes: [`The proxy address is here: ${proxyAddress}`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()
         : undefined
       }))
-
       resolve(devWebpackConfig)
     }
   })
