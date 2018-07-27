@@ -59,6 +59,30 @@ export default [
         },
         component: resolve => require(['views/ui/http.vue'], resolve),
       },
+      {
+        name: 'demo-page',
+        path: '/demo-page',
+        meta: {
+          title: 'Demo-page',
+        },
+        component: resolve => require(['views/ui/demo-page.vue'], resolve),
+      },
+      {
+        name: 'ui-toast',
+        path: '/ui-toast',
+        meta: {
+          title: 'Toast',
+        },
+        component: resolve => require(['views/ui/toast.vue'], resolve),
+      },
+      {
+        name: 'ui-tab-anchor',
+        path: '/ui-tab-anchor',
+        meta: {
+          title: 'Tab-anchor',
+        },
+        component: resolve => require(['views/ui/tab-anchor.vue'], resolve),
+      },
     ],
   },
 ]

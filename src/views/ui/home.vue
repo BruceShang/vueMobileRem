@@ -59,6 +59,24 @@
               name: 'ui-http',
             },
           },
+          {
+            name: 'Demo-page',
+            route: {
+              name: 'demo-page',
+            },
+          },
+          {
+            name: 'Toast',
+            route: {
+              name: 'ui-toast',
+            },
+          },
+          {
+            name: 'Tab-anchor',
+            route: {
+              name: 'ui-tab-anchor',
+            },
+          },
         ],
       }
     },

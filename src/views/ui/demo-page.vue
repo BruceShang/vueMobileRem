@@ -1,17 +1,7 @@
 <template>
-  <div id="app">
-    <div class="header">
-      <span class="header-logo">
-        <img src="http://image.mihui365.com/mihui-static/img/bg-download.png" alt="">
-      </span>
-      <div class="header-rg">
-        <a>登录</a>
-      </div>
-    </div>
+  <div>
     <div class="app-banner" style="background: url('http://image.mihui365.com/salelistImg/5169008608626988.jpg') no-repeat center; background-size: cover">
-    <!-- 专线园区 -->
     </div>
-    <!-- <selector title="标题内容" :options="{key: 'id', value: '1234'}"></selector> -->
     <div class="app__content">
       <div class="app__item" v-for="item in picList" :key="item">
         <img :src="`http://image.mihui365.com/boutiqueImg/${item}`" alt="">
@@ -58,7 +48,6 @@ export default {
       display: inline-block;
       position: relative
       width: 50%;
-      // height: 420px;
       vertical-align: top;
       background: #ffffff
       border-right: 1px #dedede solid
@@ -98,7 +87,7 @@ export default {
       bottom: 0px;
       z-index: 1;
       background: #ffffff;
-      box-shadow: 2px -3px 10px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px -1px 3px rgb(232, 229, 229, 0.9);
       ul {
         li {
           display: inline-block;
@@ -112,40 +101,7 @@ export default {
   }
 </style>
 
-<style>
-  .header {
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    top: 0px;
-    padding-bottom: 20px;
-    background: #ffffff;
-    z-index: 1;
-    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .header-logo {
-    display: inline-block;
-    height: 62px;
-    margin: 10px 0 0 30px;
-  }
-
-  .header-logo img {
-    width: 60px;
-    vertical-align: middle;
-  }
-
-  .header-rg {
-    float: right;
-    margin: 25px 40px 0 0;
-    color: rgba(255, 147, 0, 1);
-  }
-  .header-rg img {
-    display: inline-block;
-    width: 44px;
-    height: 28px;
-    vertical-align: sub;
-  }
+<style scpoped>
   .app-banner {
     width: 100%;
     height: 304px;
@@ -153,7 +109,6 @@ export default {
     text-align: center;
     line-height: 304px;
     color: rgba(255, 255, 255, 1);
-    margin-top: 80px;
   }
 </style>
 <style lang="less">
