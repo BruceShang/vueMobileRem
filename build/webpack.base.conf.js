@@ -43,6 +43,7 @@ const webpackConfig = {
       'components': resolve('src/components'),
       'filters': resolve('src/filters'),
       'directives': resolve('src/directives'),
+      'plugins': resolve('src/plugins'),
       'utils': resolve('src/utils'),
     }
   },

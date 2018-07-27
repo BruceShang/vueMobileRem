@@ -65,6 +65,18 @@
               name: 'demo-page',
             },
           },
+          {
+            name: 'Toast',
+            route: {
+              name: 'ui-toast',
+            },
+          },
+          {
+            name: 'Tab-anchor',
+            route: {
+              name: 'ui-tab-anchor',
+            },
+          },
         ],
       }
     },
