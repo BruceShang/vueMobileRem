@@ -111,6 +111,6 @@ export default {
     color: rgba(255, 255, 255, 1);
   }
 </style>
-<style lang="less">
+<!-- <style lang="less">
 @import '~vux/src/styles/1px.less';
-</style>
+</style> -->

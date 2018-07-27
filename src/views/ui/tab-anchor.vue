@@ -33,8 +33,8 @@
 export default {
   data() {
     return {
-      fixedHeight: 90,
-      triggerArea: 80,
+      fixedHeight: 88,
+      triggerArea: 90,
       tabsData: [
         {
           id: 123,

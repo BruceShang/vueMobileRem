@@ -33,10 +33,10 @@ export default {
       this.$loading()
       this.$http.post('api/fetchAllArticles').then((res) => {
         this.list = res
+        this.$loading.end()
       }).catch(err => {
         window.console.log(err, '捕获错误信息')
       })
-      this.$loading.end()
       // 定时器，测试使用
       setTimeout(() => {
         this.list = []

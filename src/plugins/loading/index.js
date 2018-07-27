@@ -9,10 +9,11 @@ export default {
   install(Vue, pluginOptions = {}) {
     const VueLoading = Vue.extend(Loading)
     let loading = null
+
     /**
      * 初始化并显示loading
      * @param {string} message - 自定义文案
-     * @return {Promise} Promise - 实例
+     * @return {Promise} Promise实例
      */
     function $loading(message) {
       return new Promise((resolve) => {
@@ -22,19 +23,20 @@ export default {
           loading.$mount()
           document.querySelector(pluginOptions.container || 'body').appendChild(loading.$el)
         }
-        // 第二次直接调用show方法
+
+        loading.$once('shown', resolve)
         loading.show(message)
-        resolve()
       })
     }
 
     $loading.end = () => {
       return new Promise((resolve) => {
-        // loading 没有执行显示时，不进行隐藏处理
         if (!loading) {
           resolve()
           return
         }
+
+        loading.$once('hidden', resolve)
         loading.hide()
       })
     }
