@@ -2,6 +2,7 @@
   <div class="tab-anchor">
     <div class="tab-anchor__header-wrap">
       <div class="tab-anchor__header" id="fixed-anchor" :class="{'tab-anchor__fixed': fixedTop === 'true'}" :style="{top: `${fixedHeight/100}rem`}">
+      <!-- <div class="tab-anchor__header" id="fixed-anchor" :class="{'tab-anchor__fixed': fixedTop === 'true'}" :style="{top: `${fixedvh}px`}"> -->
         <swiper :options="swiperOption">
           <swiper-slide class="tab-anchor__swiper-item" v-for="(item, index) in tabsData" :key="index" :class="{'tab-anchor__current': index === active}" @click.native="tabHandle(item, index)">
             <a class="abc">{{ item.name }}</a>
@@ -64,6 +65,7 @@ export default {
   },
   data() {
     return {
+      // fixedvh: 0,
       active: 0,
       fixedTop: false,
       tabVauleArr: [], // tab 数组距底部高度的值
@@ -75,6 +77,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      // this.fixedvh = $('#fixed-anchor').offset().top
       this.initScrollData()
     }, 500)
     this.$nextTick(() => {
